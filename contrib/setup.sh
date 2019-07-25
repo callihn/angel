@@ -21,7 +21,7 @@ if [ "$httpdconfigure" = "" ]; then
 httpdconfigure=/etc/httpd/conf/httpd.conf
 fi
 mkdir /usr/local/angel/
-mv * /usr/local/angel/
+mv ../* /usr/local/angel/
 printf "\n \n #############Angel Settings############# \n Alias /angel /usr/local/angel/html \n <Directory /usr/local/angel/html> \n Order allow,deny \n Allow from all \n </Directory> \n ########################################" >> "$httpdconfigure"
 echo $""
 echo $"$httpdconfigure Udated"
